@@ -41,13 +41,13 @@ class ViewController: UIViewController {
         let rand = Int(arc4random_uniform(2))
         
         if rand == 0 {
-            enemy = Kimara(startingHp: 50, attackPwr: 12)
+            enemy = Kimara(startingHp: 70, attackPwr: 12)
         } else {
-            enemy = DevilWizard(startingHp: 60, attackPwr: 15)
+            enemy = DevilWizard(startingHp: 90, attackPwr: 15)
         }
         
         enemyImage.hidden = false
-        enemyHpLabel.hidden = false
+        enemyHpLabel.text = String("\(enemy.hp) HP")
     }
     
     @IBAction func onChestTapped(sender: AnyObject) {
